@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&family=Roboto:wght@500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Scrollbar untuk Webkit Browser (Chrome, Opera, Safari, Edge) */
+* {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  ::-webkit-scrollbar {
+    width: 6px; /* Lebar scrollbar vertical */
+    height: 6px; /* Lebar scrollbar horizontal */
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px;
+  }
+ 
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 10px;
+    transition: background 0.3s ease;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+}
+
+/* Untuk body */
+body {
+  font-family: 'Open Sans', sans-serif;
+  scrollbar-width: thin; /* Firefox */
+  overflow-x: hidden; /* Sembunyikan scrollbar horizontal */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: thin;  /* Firefox */
+}
+
+/* Tambahan untuk menyembunyikan scrollbar di Chrome, Safari dan Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Kelas khusus untuk konten yang tetap bisa di-scroll */
+.scrollable-content {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+.scrollable-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollable-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+/* Untuk browser Webkit mobile */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+  }
+}

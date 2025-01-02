@@ -27,7 +27,7 @@ export default function Header() {
 
     return () => {
       document.body.style.overflow = 'unset';
-    };
+    };``
   }, [isOpen]);
 
   const handleNavigation = (event, href, hash) => {
@@ -113,7 +113,7 @@ export default function Header() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.3 }}
-              className="w-11 rounded-full px-1"
+              className="w-14 rounded-full px-1"
             />
             <motion.h1 
               initial={{ opacity: 0, x: -20 }}
